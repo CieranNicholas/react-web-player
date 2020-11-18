@@ -99,6 +99,7 @@ const Player = ({
 
         <p>{songInfo.duration ? getTime(songInfo.duration) : "0:00"}</p>
       </div>
+
       <div className="play-control">
         <FontAwesomeIcon
           onClick={() => skipTrackHandler("skip-back")}

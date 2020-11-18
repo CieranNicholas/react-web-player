@@ -23,6 +23,13 @@ h4 {
 .library-active {
   margin-left: 30%;
 }
+.volume-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
 @import "./song";
 @import "./player";
