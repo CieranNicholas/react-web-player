@@ -94,6 +94,7 @@ const Player = ({
             onChange={dragHandler}
             type="range"
           />
+
           <div style={trackAnim} className="animate-track"></div>
         </div>
 
@@ -106,18 +107,21 @@ const Player = ({
           className="skip-back"
           size="2x"
           icon={faAngleLeft}
+          color="#8a8a8a"
         />
         <FontAwesomeIcon
           onClick={playSongHandler}
           className="play"
           size="2x"
           icon={isPlaying ? faPause : faPlay}
+          color="#8a8a8a"
         />
         <FontAwesomeIcon
           onClick={() => skipTrackHandler("skip-forward")}
           className="skip-forward"
           size="2x"
           icon={faAngleRight}
+          color="#8a8a8a"
         />
       </div>
     </div>

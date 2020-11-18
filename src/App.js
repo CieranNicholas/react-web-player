@@ -1,13 +1,19 @@
 import React, { useState, useRef } from "react";
 //Import Styles
 import "./styles/app.scss";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
 //Adding Components
 import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
+
 //Import Util
 import data from "./data";
+//import Icons
+import { faVolumeDown, faVolumeUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   //Ref
@@ -48,8 +54,8 @@ function App() {
 
   function raiseVolume(e) {
     currentVolume.volume = e.target.value;
-    console.log(e.target.value);
   }
+
   return (
     <div className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
@@ -65,14 +71,28 @@ function App() {
         setCurrentSong={setCurrentSong}
         setSongs={setSongs}
       />
-      <input
-        className="volume-slider"
-        type="range"
-        min="0"
-        max="1"
-        onChange={raiseVolume}
-        step="0.01"
-      ></input>
+      <div className="volume-slider-container">
+        <div className="volume-slider-content">
+          <FontAwesomeIcon
+            icon={faVolumeDown}
+            className="volumeIcon"
+            color="#8a8a8a"
+          />
+          <input
+            type="range"
+            min="0"
+            max="1"
+            onChange={raiseVolume}
+            step="0.01"
+            className="volume-slider"
+          ></input>
+          <FontAwesomeIcon
+            icon={faVolumeUp}
+            className="volumeIcon"
+            color="#8a8a8a"
+          />
+        </div>
+      </div>
 
       <Library
         audioRef={audioRef}
@@ -89,10 +109,6 @@ function App() {
         ref={audioRef}
         src={currentSong.audio}
         onEnded={songEndHandler}
-        // currentSong={currentSong}
-        // setCurrentSong={setCurrentSong}
-        // currentVolume={currentVolume}
-
         id="audioPlayer"
       ></audio>
     </div>

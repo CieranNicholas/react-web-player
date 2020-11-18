@@ -72,22 +72,22 @@ function chillHop() {
       active: false,
     },
     {
-      name: "Wallmonger",
-      cover: "https://i1.sndcdn.com/artworks-000603206788-w3u14s-t500x500.jpg",
-      artist: "Virtual Riot",
-      audio:
-        "https://www.dropbox.com/s/2kzc4iomdev2rzv/Virtual%20Riot%20-%20Wallmonger.mp3?dl=1",
-      color: ["#6E4E97", "#2B163D"],
+      name: "Sodium",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/10/efaa848553d09b4d9fc0752844456e41b34de276-1024x1024.jpg",
+      artist: "Philanthrope, Tesk",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9149",
+      color: ["#60B2F8", "#684D9B"],
       id: uuidv4(),
       active: false,
     },
     {
-      name: "Everyday ft. Yosie (VIP)",
-      cover: "https://i1.sndcdn.com/artworks-000277715189-j74oe7-t500x500.jpg",
-      artist: "Virtual Riot",
-      audio:
-        "https://www.dropbox.com/s/ecnsfuanz9t2p5k/Virtual%20Riot%20-%20Everyday%20ft.%20Yosie%20%28VIP%29.mp3?dl=1",
-      color: ["#030303", "#9A9A9A"],
+      name: "Slim Bobby",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/10/23fdd99adc3e16abcb67b004ea3e748ebf433a49-1024x1024.jpg",
+      artist: "Aviino",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10448",
+      color: ["#B464B3", "#4C85C5"],
       id: uuidv4(),
       active: false,
     },
